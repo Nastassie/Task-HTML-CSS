@@ -4,81 +4,61 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
+
 <body>
 
-<h2>CSS Layout Float</h2>
-<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
-
-<header>
+<div class = "header">
   <h2>Cities</h2>
-</header>
+</div>
 
+
+<div class = "leftcolumn">
+<section>
+  <article>
+    <h1> Alarm Clock</h1>
+    <p>Physics gets involved in your daily life right from you wake up in the morning. The buzzing sound of an alarm clock helps you wake up in the morning as per your schedule. The sound is something that you can’t see, but hear or experience. Physics studies the origin, propagation, and properties of sound. It works on the concept of Quantum Mechanics.</p>
+  </article>
+  <article>
+    <h1>Steam Iron</h1>
+    <p>Right after you wake up in the morning and start preparing for your school/office, you need an ironed cloth, and that’s where Physics comes into play. The steam iron is such a machine that uses a lot of Physics to make it go. The foremost principle of Physics used in the steam iron is “Heat.” Heat, in Thermodynamics, is a type of energy transfer from a warmer substance to a colder one. Ironing works by having a heated metal base- the soleplate.</p>
+  </article>
+  <article>
+    <h1>Walking</h1>
+    <p>Now, when you get ready for your office/school, whatever medium of commutation is, you certainly have to walk up to a certain distance. You can easily walk is just because of Physics. While you have a walk in a park or on a tar road, you have a good grip without slipping because of a sort of roughness or resistance between the soles of your shoes and the surface of the road. This resistance, which is responsible for the grip, is called “Friction” or “Traction.” However, when a banana peel comes under your foot, you suddenly fall. Now, what makes you fall? Well, it’s due to the reduced friction between your shoes and the surface of the road because of the slippery banana peel.</p>
+  </article>
+  <article>
+    <h1>Ball Point Pen</h1>
+    <p>Whether you are at your workplace or in your school, a Ball Point Pen is your weapon. Had Physics not been there, you would not have able to write with a Ball Point Pen on a paper. In this case, the concept of gravity comes into play. As your pen moves across the paper, the ball turns and gravity forces the ink down onto the top of the ball where it is transferred onto the paper.</p>
+  </article>
+  <article>
+    <h1>Headphones/Earphones</h1>
+    <p>When you get tired of work or studies, listening to music comes handy. Have you ever thought how does your headphone/earphone work? Well, it’s again because of Physics. The concept of magnetism and sound waves are involved in the science of your headphone/earphone. When you plug your headphone/earphone into an electrical source, the magnet in your headphone/earphone creates an electromagnetic field, which ultimately results in sound waves.</p>
+  </article>
+  <article>
+    <h1>Car Seat-Belts</h1>
+    <p>Have you ever noticed that on which principle does your car seat-belt work? Well, it’s again Physics. When you tighten your car seat-belt, it works on the concept of “Inertia.” Inertia is unwillingness or laziness of a body to change its state of rest or motion. In case of a car collision, your seat-belt helps prevent your body from moving in a forward direction; as your body resists being stopped because of inertia of motion.</p>
+  </article>
+  <article>
+    <h1>Camera Lens</h1>
+    <p>The phenomenon of “Selfie” has engulfed people of every age groups. You entertain yourself by clicking photos. The Lens used in a camera works on the principle of Optics. The set of convex lenses provide the camera with an image outside of the camera.</p>
+  </article>
+  <article>
+    <h1>Cell Phones</h1>
+    <p>Cellphones have become like Oxygen gas in modern social life. Hardly, anyone would have been untouched by the effects of a cell phone. Whether conveying any urgent message or doing incessant gossips, cellphones are everywhere. But do you know how does a cell phone work? It works on the principle of electricity and the electromagnetic spectrum, undulating patterns of electricity and magnetism.</p>
+  </article>
+  <article>
+    <h1>Batteries</h1>
+    <p>Whether in cellphones, cars, torches, toys, or any other appliance, batteries act as saviors of electricity. Batteries work on the principle of capacitance. Since the late 18th century, capacitors have been used to store electrical energy. Benjamin Franklin was the first to coin the phrase “battery” for a series of capacitors in an energy store application.</p>
+  </article>
+  <article>
+    <h1>Doppler Radar</h1>
+    <p>To check the overspeeding vehicles, police often use Doppler Radars. Doppler Radars work on the principle of Doppler Effect. The Doppler Effect is nothing but a change in the pitch of a sound when the source of the sound is moving relative to the listener. It is because the frequency of the sound wave changes as the source of sound moves closer to or farther from the listener.</p>
+  </article>
+</section>
+</div>
+<div class = "rightcolumn">
 <section>
   <nav>
     <ul>
@@ -87,14 +67,8 @@ footer {
       <li><a href="#">Tokyo</a></li>
     </ul>
   </nav>
-  
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
 </section>
-
+</div>
 <footer>
   <p>Footer</p>
 </footer>
