@@ -4,32 +4,64 @@
 
 body {
   font-family: Arial;
-  padding: 10px;
+  /*padding: 10px;*/
   background: #f1f1f1;
 }
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
-  text-align: center;
+  padding: 20px;
   background: white;
+  height : 120px;
 }
+.headerlogo {   
+  float: left;
+  width: 140px;
+  height: auto;
+  }
 
-.header h1 {
-  font-size: 50px;
+/* Right column */
+.rightpart {
+  float: left;
+  height: 100%;
+  padding-top: 60px;
+  color: #f1f1f1;
+  
+  
 }
-
+.social{
+  float: right;
+  width: 200px;
+  height: 100%;
+  padding-top: 20px;
+}
+.header img {
+    float : left;
+    height: 100px;
+}
+/*.footer img {
+    float : left;
+    height: 100px;
+}*/
+.header ul, li {
+    float: right;
+    display: block;
+    
+}
 /* Style the top navigation bar */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  /*overflow: hidden;*/
+  float: right;
+  position: static;
+  bottom:2px;
+  /* background-color: #333*/
 }
 
 /* Style the topnav links */
 .topnav a {
   float: right;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -40,49 +72,153 @@ body {
   background-color: #ddd;
   color: black;
 }
+.contacts {
+  list-style: none outside none;
+  /*display: flex;
+  flex-wrap: wrap;*/
+  position: statis;
+  top: 30px;
+  float: right;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.contacts li {
+  margin-bottom: 0.25rem;
+  margin-right: 1em;
+}
+.contacts li:before {
+  display: none;
+}
+.contacts li a {
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
 
+.contacts li a.facebook:hover {
+  color: #3b5998;
+}
+.contacts li a.github:hover {
+  color: dimgrey;
+}
+.contacts li a.mail:hover {
+  color: dimgrey;
+}
+.contacts li a.skype:hover {
+  color: #00aff0;
+}
+.contacts li a.telegram:hover {
+  color: #0088cc;
+}
+.contacts li a.phone:hover {
+  color: dimgrey;
+}
+.contacts li a.website {
+  display: none;
+}
+.contacts li a .icon {
+  fill: currentColor;
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.row {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: table;
+    background-color: #ddd;
+
+    
+    
+}
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
   float: left;
   width: 75%;
+  height: 100%;
+  flex-wrap:wrap;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
   width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
+  height: 100%;
+  background-color: white;
+  padding-top: 5px;
+  
+}
+
+.aside {
+    padding: 20px;
 }
 
 /* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+.asideimg {
+   width: 100%;
+   
+  }
 
 /* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
+  margin: 5px;
+  float: left;
+  width: 290px;
+  /*display: block;*/
 }
-
+.search {
+  padding: 10px;
+  margin-top: 20px;
+  text-align: right;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
+  height: 170px;
   background: #ddd;
-  margin-top: 20px;
+  margin-top: 10px;
+  
+}
+
+.footerlogo {   
+  float: left;
+  width: 140px;
+  height: auto;
+  }
+.copyrights {
+  text-align: left;
+  
+}
+/* Right column */
+.rightpart {
+  float: left;
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  color: blue;
+    
+}
+
+.social{
+  float: right;
+  width: 200px;
+  height: 100%;
+  padding-top: 20px;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
