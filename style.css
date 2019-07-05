@@ -5,7 +5,7 @@
 body {
   font-family: Arial;
   padding: 10px;
-  background: #f1f1f1;
+  background: white;
 }
 
 /* Header/Blog Title */
@@ -17,7 +17,7 @@ body {
 
 .social{
   display: block;
-  float: left;
+  float: right;
    
 }
 .header img {
@@ -27,7 +27,7 @@ body {
 }
 
 .header ul, li {
-    float: left;
+    float: right;
     display: block;
     color: black;
     text-align: center;
@@ -110,8 +110,8 @@ body {
 .row {
     max-width: 1200px;
     margin: auto;
-    height: 100%;
-    display: table;
+    /*height: 100%;*/ 
+    display: block;
     background-color: #ddd;
     /*flex-wrap:wrap;*/
 
@@ -152,18 +152,20 @@ body {
   background-color: white;
   padding: 20px;
   /*margin-top: 20px;*/
-  margin: 5px;
+  margin: 0px;
   float: left;
-  width: 290px;
-  /*display: block;*/
+  width: 33.3%;
+  display: block;
 }
 .card h1{
     text-align: center;
 }
 .card img{
-    width: 260px;
+    width: 100%;
     height:auto;
 }
+
+
 .info p{
     font-size: 0.9em;
     font-weight: 100;
@@ -172,6 +174,24 @@ body {
     color: #ddd;
 
 }
+
+.info img {
+  height: 30px;
+  width: auto;
+}
+
+.info svg{
+  height: 40px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.checked {
+  color: orange;
+}
+
+
 .search {
   padding: 10px;
   margin-top: 20px;
@@ -181,7 +201,7 @@ body {
 .row:after {
   content: "";
   display: table;
-  clear: both;
+ /* clear: both;*/
 }
 
 /* Footer */
@@ -233,6 +253,21 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .card {   
+    width: 100%;
+    padding: 10;
+    margin:auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {   
+    width: 50%;
+    padding: 10;
+    margin:auto;
+  }
+}
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .nav a {
