@@ -11,24 +11,55 @@ body {
 /* Header/Blog Title */
 .header {
   padding: 5px;
-  background: white;
-  height : 120px;
+  background: #00aff0;
+  display: table;
+  height : 100%;
+  width: 100%;
+  
+  
+}
+
+.headerlogo {
+    float : left;
+    width: 25%;
+    height: 100%;
 }
 
 .social{
+  float : left;
+  width: 75%;
+ /* height: 100%;*/
   display: block;
-  float: right;
-   
-}
-.header img {
-    float : left;
-    height: 100px;
-    width: auto;
+ 
 }
 
-.header ul, li {
+.nav{
+    position: absolute;
+    top: 85px;
+    right: 20px;
+}
+
+.nav li  {
+ 
     float: right;
-    display: block;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    list-style: none outside none;
+
+}
+
+/*.header_contacts {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.header_contacts  li {
+    float: right;
+    display: inline-block;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -36,6 +67,23 @@ body {
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 0;
+    
+   
+    
+}*/
+
+
+.contacts  li {
+    float: right;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    list-style: none outside none;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    
    
     
 }
@@ -58,8 +106,8 @@ body {
 
 .contacts {
   list-style: none outside none;
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
   float: right;
   padding: 0;
   margin-top: 0;
@@ -124,10 +172,13 @@ body {
   float: left;
   width: 75%;
   height: 100%;
-  /*flex-wrap:wrap;*/
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 /* Right column */
+
 .rightcolumn {
   float: left;
   width: 25%;
@@ -162,7 +213,7 @@ body {
 }
 .card img{
     width: 100%;
-    height:auto;
+    height:200px;
 }
 
 
@@ -209,7 +260,7 @@ body {
   padding: 10px;
   width: 100%;
   height: 100%;
-  background: #ddd;
+  background: #3b5998;
   margin-top: 10px;
   display: table;
   position: bottom;
@@ -237,8 +288,9 @@ body {
     
 }
 
-.footersocial{
+.footersocial {
   float: left;
+  display: block;
   width: 40%;
   height: 100%;
   padding-top: 10px;
@@ -253,13 +305,6 @@ body {
   }
 }
 
-@media screen and (max-width: 430px) {
-  .card {   
-    width: 100%;
-    padding: 10;
-    margin:auto;
-  }
-}
 
 @media screen and (max-width: 800px) {
   .card {   
@@ -268,10 +313,103 @@ body {
     margin:auto;
   }
 }
+
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 430px) {
-  .nav a {
-    float: none;
-    width: 100%;
+
+
+@media screen and (max-width: 800px) {
+.footer {
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  margin-top: 10px;
+  position: bottom;
   }
+
+}
+
+@media screen and (max-width: 800px) {
+  .footersocial {
+  float: right;
+  display: block;
+  width: 10%;
+  height: 100%;
+  padding-top: 10px;
+}
+    
+  }
+
+@media screen and (max-width: 800px) {
+.rightpart {
+  float: left;
+  width: 60%;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+  color: blue;
+    
+}
+}
+@media screen and (max-width: 800px) {
+.footer img {   
+  float: left;
+  width: 100%;
+  height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .leftcolumn, .card {   
+    width: 100%;
+    padding: 10;
+    margin:auto;
+  }
+}
+@media screen and (max-width: 400px) {
+.header  {
+    width: 100%;
+    height: 300px;
+
+}
+}
+@media screen and (max-width: 400px) {
+.headerlogo  {
+    width: 100%;
+    height: 120px;
+    padding: 10;
+    margin:auto;
+}
+}
+@media screen and (max-width: 400px) {
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+ .social {
+    width: 100%;
+    
+   }
+}
+
+@media screen and (max-width: 400px) {
+ .nav {
+    position: absolute;
+    top:150px;
+    width: 100%;
+   }
+}
+
+@media screen and (max-width: 400px) {
+.nav li{
+    float: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px; 
+}
 }
