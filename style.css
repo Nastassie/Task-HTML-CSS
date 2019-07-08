@@ -7,15 +7,23 @@ body {
   padding: 10px;
   background: #f9ffff;
 }
-
+body a{
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
 /* Header/Blog Title */
+.top{
+  height: 100%;
+  width: 100%;
+  background: #0072e9;
+}
 .header {
   padding: 5px;
   background: #0072e9;
-  display: table;
+  display: flex;
   height : 100%;
-  width: 100%;
-  
+  max-width: 1200px;
+  margin: auto;
   
 }
 
@@ -28,7 +36,6 @@ body {
 .social{
   float : left;
   width: 75%;
- /* height: 100%;*/
   display: block;
  
 }
@@ -36,12 +43,10 @@ body {
 .nav{
     position: absolute;
     top: 85px;
-    right: 20px;
+    right: 30px;
 }
 
 .nav li  {
- 
-  /*  float: right;*/
     display: inline-block;
     color: #070010;
     text-align: center;
@@ -51,7 +56,6 @@ body {
 }
 
 .contacts  li {
-   /* float: right;*/
     display: inline-block;
     color: black;
     text-align: center;
@@ -83,8 +87,6 @@ body {
 
 .contacts {
   list-style: none outside none;
-  /*display: flex;
-  flex-wrap: wrap;*/
   float: right;
   padding: 0;
   margin-top: 0;
@@ -105,28 +107,10 @@ body {
   color: #070010;
   transition: color 0.2s ease-in-out;
 }
-
-.contacts li a.facebook:hover {
+.contacts li a.link:hover {
   color: #3b5998;
 }
-.contacts li a.github:hover {
-  color: dimgrey;
-}
-.contacts li a.mail:hover {
-  color: dimgrey;
-}
-.contacts li a.skype:hover {
-  color: #00aff0;
-}
-.contacts li a.telegram:hover {
-  color: #0088cc;
-}
-.contacts li a.phone:hover {
-  color: dimgrey;
-}
-.contacts li a.website {
-  display: none;
-}
+
 .contacts li a .icon {
   fill: currentColor;
   height: 1.1428rem;
@@ -137,7 +121,8 @@ body {
     max-width: 1200px;
     margin: auto;
     /*height: 100%;*/ 
-    display: block;
+     overflow: hidden;
+    display: table;
     background-color: 	#f9ffff;
     /*flex-wrap:wrap;*/
 
@@ -149,10 +134,13 @@ body {
 .leftcolumn {   
   float: left;
   width: 75%;
+  display: table-cell;
   height: 100%;
+  background-color: #0072e9;
   display:flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  padding-bottom: 99999px; margin-bottom: -99999px;
 }
 
 /* Right column */
@@ -160,11 +148,13 @@ body {
 .rightcolumn {
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   float: left;
+  display: table-cell;
   width: 25%;
   height: 100%;
   background-color: #0072e9;
   padding-top: 5px;
    color: #f9ffff;
+   padding-bottom: 99999px; margin-bottom: -99999px;
 }
 
 .aside {
@@ -224,7 +214,6 @@ body {
 .card {
   background-color: #ddf6fa;
   padding: 20px;
-  /*margin-top: 20px;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0px;
   float: left;
@@ -240,8 +229,19 @@ body {
     width: 100%;
     height:200px;
 }
-
-
+.card a{
+  text-decoration: none;
+  color: #070010;
+ 
+}
+.card a:hover{
+  text-decoration: none;
+  color: #0042ab;
+ 
+}
+.nav a:hover {
+   color: #070010;
+}
 .info p{
     font-size: 0.9em;
     font-weight: 100;
@@ -293,13 +293,19 @@ body {
 .row:after {
   content: "";
   display: table;
- /* clear: both;*/
-}
+ }
 
 /* Footer */
+
+.bottom{
+  height: 100%;
+  width: 100%;
+  background: #0042ab;
+}
 .footer {
   padding: 10px;
-  width: 100%;
+  margin: auto;
+  width: 1200px;
   height: 100%;
   background: #0042ab;
   margin-top: 10px;
@@ -347,24 +353,38 @@ body {
   }
 }
 
-
+@media screen and (max-width: 800px) {
+  .leftcolumn {   
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: flex-start;
+  }
+}
 @media screen and (max-width: 800px) {
   .card {   
     width: 50%;
-    padding: 10;
+    padding: 10px;
     margin:auto;
+    display: block;
   }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+.top, .header {
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  }
 
+}
 
 @media screen and (max-width: 800px) {
 .footer {
   padding: 1px;
   width: 100%;
   height: 100%;
-  background: #ddd;
   margin-top: 10px;
   position: bottom;
   }
@@ -401,22 +421,22 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .leftcolumn, .card {   
     width: 100%;
-    padding: 10;
-    margin:auto;
+    padding: 10px;
+    margin: auto;
   }
 }
 @media screen and (max-width: 400px) {
 .header  {
     width: 100%;
     height: 305px;
-
+    display: table;
 }
 }
 @media screen and (max-width: 400px) {
-.headerlogo  {
+.headerlogo {
     width: 100%;
     height: 120px;
     padding: 10;
@@ -424,7 +444,8 @@ body {
 }
 }
 @media screen and (max-width: 400px) {
-  img {
+ img {
+  
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -442,7 +463,7 @@ body {
 @media screen and (max-width: 400px) {
  .nav {
     position: absolute;
-    top:155px;
+    top:175px;
     width: 100%;
    }
 }
