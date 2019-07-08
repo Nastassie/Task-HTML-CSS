@@ -26,24 +26,28 @@ body a{
   margin: auto;
   
 }
-
+.header a {
+     text-decoration: none;
+     text-align: center;
+     
+}
 .headerlogo {
     float : left;
     width: 25%;
     height: 100%;
 }
-
 .social{
   float : left;
   width: 75%;
-  display: block;
- 
+  display: flex;
+  height: 120px;
+  flex-flow: column wrap;
+  align-content: flex-end;
 }
 
 .nav{
-    position: absolute;
-    top: 85px;
-    right: 30px;
+    height: 0px;
+    margin: auto;
 }
 
 .nav li  {
@@ -53,6 +57,10 @@ body a{
     text-decoration: none;
     list-style: none outside none;
 
+}
+.contacts{
+    height: 50px;
+    margin: auto;
 }
 
 .contacts  li {
@@ -64,14 +72,7 @@ body a{
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 0;
-    
-   
-    
-}
-.header a {
-     text-decoration: none;
-     text-align: center;
-     
+       
 }
 .nav a {
   text-align: center;
@@ -120,14 +121,10 @@ body a{
 .row {
     max-width: 1200px;
     margin: auto;
-    /*height: 100%;*/ 
-     overflow: hidden;
+    overflow: hidden;
     display: table;
     background-color: 	#f9ffff;
-    /*flex-wrap:wrap;*/
-
-    
-    
+      
 }
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -144,9 +141,8 @@ body a{
 }
 
 /* Right column */
-
 .rightcolumn {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   float: left;
   display: table-cell;
   width: 25%;
@@ -159,35 +155,29 @@ body a{
 
 .aside {
     padding: 20px;
-
 }
 
 
 .aside p{
-   
-    text-align: justify;
+   text-align: justify;
 }
 
-/* Fake image */
 .asideimg {
    width: 100%;
-   
-  }
+}
 
   .archive{
-    
     float: left;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
    font-size: 0.9em;
    font-weight: 400;
-  }
+}
 .archive h3{
   padding-left: 50px;
 }
 .archive li {
- 
   list-style: none outside none;
   margin-bottom: 0.25rem;
   margin-right: 1em;
@@ -206,7 +196,6 @@ body a{
   color: 		#0042ab;
  
 }
-
 .icons{
   float:right;
 }
@@ -237,18 +226,13 @@ body a{
 .card a:hover{
   text-decoration: none;
   color: #0042ab;
- 
-}
-.nav a:hover {
-   color: #070010;
-}
+ }
 .info p{
     font-size: 0.9em;
     font-weight: 100;
     text-align: right;
     padding: 10px;
     color: #070010;
-
 }
 
 .info img {
@@ -263,17 +247,14 @@ body a{
   padding: 0;
   float: right;
 }
-.checked {
-  color: orange;
-}
-
 .rate {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  
+  }
+.checked {
+  color: orange;
 }
-
 .comment img{
   height: 18px;
   width: 18px;
@@ -289,14 +270,8 @@ body a{
   margin-top: 20px;
   text-align: right;
 }
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
- }
 
 /* Footer */
-
 .bottom{
   height: 100%;
   width: 100%;
@@ -311,21 +286,17 @@ body a{
   margin-top: 10px;
   display: table;
   position: bottom;
- 
-}
-
+ }
 .footerimg {   
   float: left;
   width: 20%;
   height: auto;
   color: #f9ffff;
   }
-
 .copyrights {
   text-align: left;
   
 }
-/* Right column */
 .rightpart {
   float: left;
   width: 40%;
@@ -335,7 +306,6 @@ body a{
   color:  #f9ffff;;
     
 }
-
 .footersocial {
   float: left;
   display: block;
@@ -409,9 +379,7 @@ body a{
   height: 100%;
   padding-left: 20px;
   padding-top: 20px;
-  color: blue;
-    
-}
+  }
 }
 @media screen and (max-width: 800px) {
 .footer img {   
@@ -445,8 +413,7 @@ body a{
 }
 @media screen and (max-width: 400px) {
  img {
-  
-  display: block;
+    display: block;
   margin-left: auto;
   margin-right: auto;
   }
